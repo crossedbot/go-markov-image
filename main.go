@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"go-markov/markov"
 	"os"
+
+	"github.com/crossedbot/go-markov-image/markov"
 )
 
 const (
