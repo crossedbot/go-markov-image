@@ -47,7 +47,9 @@ func colorToRGBA(c color.Color) color.RGBA {
 }
 
 // CompressColor compresses a given color using the given threshold. RGBA values
-// (R, G, B, or A) that are less than the threshold, they will be reduced to 0.
+// (R, G, B, or A) that are less than the threshold, will be reduced to 0, all
+// other values are reduced to the closest multiple of the threshold; IE. given
+// a R value of 22 and a threshold of 3, R will be compressed to 21.
 func compressColor(c color.Color, threshold uint8) color.Color {
 	r, g, b, a := c.RGBA()
 	return color.RGBA{
